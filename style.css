@@ -1,0 +1,433 @@
+#about, #skills, #favorite-languages, #projects, #preview, #contact {
+  background: linear-gradient(120deg, #3a0b0b 70%, #ff0000 100%);
+  border-radius: 22px;
+  box-shadow: 0 4px 24px rgb(250, 1, 1);
+  padding: 2.5rem 2rem;
+  margin: 2.2rem auto 2.5rem auto;
+  max-width: 950px;
+  /* REMOVE these lines if present: */
+  /* position: relative; */
+  /* overflow: hidden; */
+  z-index: 1;
+  transition: box-shadow 0.2s;
+}
+#about:hover, #skills:hover, #favorite-languages:hover, #preview:hover, #contact:hover {
+  box-shadow: 0 8px 40px #ffd70055;
+}
+
+/* Accent Circle */
+#about::before, #skills::before, #favorite-languages::before, #preview::before, #contact::before {
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 0, 0, 0.13);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* About Section Image Centering & Style */
+.about-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: .2rem;
+}
+#about img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #5c5b5a;
+  box-shadow: 0 4px 24px rgba(255, 248, 248, 0.18);
+  object-fit: cover;
+  background: #fff;
+  z-index: 1;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+#about img:hover {
+  transform: scale(1.07) rotate(-3deg);
+  box-shadow: 0 8px 32px #ff0000a0;
+}
+
+/* About Section Text */
+#about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+  color: #d11717;
+  letter-spacing: 1px;
+  text-shadow: 1px 2px 8px #ff0000;
+  z-index: 1;
+}
+#about p {
+  font-size: 1.13rem;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+  z-index: 1;
+}
+.scholar-quote {
+  font-style: italic;
+  color: #fdfdfd;
+  background: rgba(0,0,0,0.13);
+  padding: 0.7rem 1.2rem;
+  border-left: 4px solid #ffd700;
+  border-radius: 0 16px 16px 0;
+  font-size: 1.08rem;
+  z-index: 1;
+}
+
+/* Download CV Button */
+.download-cv-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  background: #ffd700;
+  color: #2d3e50;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px #ffd70033;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.download-cv-btn:hover {
+  background: #2d3e50;
+  color: #ffd700;
+  transform: scale(1.05);
+}
+
+/* Skills List */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+.skills-list li {
+  background: #ffffff;
+  color: #2d3e50;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px #ffd70033;
+  transition: background 0.2s, color 0.2s;
+}
+.skills-list li:hover {
+  background: #2d3e50;
+  color: #ffd700;
+}
+
+/* Favorite Languages List */
+.favorite-languages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+.favorite-languages-list li {
+  background: #fffbe6;
+  color: #000000;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px #ffd70033;
+  border: 2px solid #fffefe;
+  transition: background 0.2s, color 0.2s;
+}
+.favorite-languages-list li:hover {
+  background: #ff0000;
+  color: #ffffff;
+}
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+.projects-list li {
+  background: #ffffff;
+  color: #2d3e50;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px #ffd70033;
+  transition:  0.2s, color 0.2s;
+}
+.projects-list li:hover {
+  background: #2d3e50;
+  color: #ffd700;
+}
+/* Gallery/Preview */
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+.gallery-img {
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #ffd70022;
+  border: 2px solid #ff0000;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #ff0000;
+}
+.gallery-img:hover {
+  transform: scale(1.04) rotate(-2deg);
+  box-shadow: 0 8px 32px #ff000055;
+  border-color: hsl(211, 27%, 27%);
+}
+
+/* Contact Section */
+#contact > div {
+  z-index: 1;
+  position: relative;
+}
+#contact a {
+  color: #b1b1b1;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+#contact a:hover {
+  color: #004bd6;
+}
+
+/* Responsive Fix */
+@media (max-width: 900px) {
+  #about, #skills, #favorite-languages, #preview, #contact {
+    padding: 1.2rem 0.5rem;
+  }
+  .gallery-img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 320px;
+  }
+  #about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-img-box {
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Sidebar and other styles remain as you have them */
+@media (max-width: 700px) {
+    .sidebar {
+        left: -250px;
+        transition: left 0.3s;
+    }
+    .sidebar.open {
+        left: 0;
+    }
+    .sidebar-toggle {
+        display: block;
+    }
+    body {
+        margin-left: 0;
+    }
+}	
+/* Sidebar menu with left border line design */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-left: 3px solid #ffd700; /* gold line on the left */
+}
+
+.sidebar-menu li {
+    margin: 1.2rem 0;
+    position: relative;
+}
+
+.sidebar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.6rem 1rem 0.6rem 1.5rem; /* extra left padding for line */
+    border-radius: 12px 0 0 12px;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    position: relative;
+}
+
+.sidebar-menu li a:hover {
+    background: #cac1c1;
+    color: #ff0000;
+    transform: translateX(8px) scale(1.05);
+}
+
+/* Optional: highlight active menu item */
+.sidebar-menu li a.active,
+.sidebar-menu li a:focus {
+    background: #ff0000;
+    color: #ff0000;
+}
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 200;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    font-size: 2rem;
+    border-radius: 100px;
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    background: #630202;
+    color: #fff;
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    transition: left 0.3s;
+}
+.sidebar-profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.sidebar-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #000000;
+    margin-bottom: 0.5rem;
+}
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-left: 3px solid #ffffff;
+}
+.sidebar-menu li {
+    margin: 1.2rem 0;
+    position: relative;
+}
+.sidebar-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.6rem 1rem 0.6rem 1.5rem;
+    border-radius: 12px 0 0 12px;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    position: relative;
+}
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active,
+.sidebar-menu li a:focus {
+    background: #ff0000;
+    color: #ffffff;
+    transform: translateX(8px) scale(1.05);
+}
+
+/* Main content margin for sidebar */
+body {
+    margin-left: 220px;
+    background: #f7f7fa;
+}
+
+/* Collapsible sidebar for mobile */
+@media (max-width: 700px) {
+    .sidebar {
+        left: -250px;
+        transition: left 0.3s;
+    }
+    .sidebar.open {
+        left: 0;
+    }
+    .sidebar-toggle {
+        display: block;
+    }
+    body {
+        margin-left: 0;
+    }
+}/* Add this to your style.css */
+.download-cv-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  background: hsl(0, 0%, 100%);
+  color: #2d3e50;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px #ffd70033;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.download-cv-btn:hover {
+  background: #2d3e50;
+  color: #15ff00;
+  transform: scale(1.05);
+} /* Animation for Centered Section (About Me and others) */
+.centered-section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  width: 90vw;
+  max-width: 950px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 40px #ffd70055;
+  background: linear-gradient(120deg, #fff 70%, #ffd70022 100%);
+  border-radius: 22px;
+  padding: 2.5rem 2rem;
+  animation: popIn 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.92);
+    filter: blur(8px);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -52%) scale(1.03);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    filter: blur(0);
+  }
+}
